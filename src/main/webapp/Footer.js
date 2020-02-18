@@ -6,3 +6,4 @@ linkBack.onclick = function() {
 linkBack.value = "LinkBack here."
 linkBack.className = "myButton";
 document.body.appendChild(linkBack);
+//.
