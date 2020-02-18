@@ -10,7 +10,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
 /**
- *
+ * .
  * @author carol
  */
 @Entity
