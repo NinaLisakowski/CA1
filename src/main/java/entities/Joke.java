@@ -69,28 +69,4 @@ public class Joke implements Serializable {
         this.type = type;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Joke other = (Joke) obj;
-        if (!Objects.equals(this.joke, other.joke)) {
-            return false;
-        }
-        if (!Objects.equals(this.reference, other.reference)) {
-            return false;
-        }
-        if (!Objects.equals(this.type, other.type)) {
-            return false;
-        }
-        return true;
-    }
-
 }

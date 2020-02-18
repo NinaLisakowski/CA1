@@ -89,8 +89,8 @@ public class JokeFacadeTest {
      */
     @Test
     public void testGetJokeById() {
-        Joke exp = j1;
-        Joke result = facade.getJokeById(exp.getId());
+        JokeDTO exp = new JokeDTO(j1);
+        JokeDTO result = facade.getJokeById(j1.getId());
         assertEquals(exp, result);
     }
 
@@ -99,11 +99,11 @@ public class JokeFacadeTest {
      */
     @Test
     public void testGetRandomJoke() {
-        List<Joke> expList = new ArrayList<>();
-        expList.add(j1);
-        expList.add(j2);
-        expList.add(j3);
-        Joke result = facade.getRandomJoke();
+        List<JokeDTO> expList = new ArrayList<>();
+        expList.add(new JokeDTO(j1));
+        expList.add(new JokeDTO(j2));
+        expList.add(new JokeDTO(j3));
+        JokeDTO result = facade.getRandomJoke();
         assertTrue(expList.contains(result));
     }
 

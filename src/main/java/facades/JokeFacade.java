@@ -44,24 +44,24 @@ public class JokeFacade {
         }
     }
 
-    public Joke getJokeById(int id) {
+    public JokeDTO getJokeById(int id) {
         EntityManager em = getEntityManager();
         try {
             Joke joke = em.find(Joke.class, id);
-            return joke;
+            return new JokeDTO(joke);
         } finally {
             em.close();
         }
     }
 
-    public Joke getRandomJoke() {
+    public JokeDTO getRandomJoke() {
         Random ran = new Random();
         EntityManager em = getEntityManager();
         try {
             TypedQuery<Joke> q = em.createNamedQuery("Joke.getAll", Joke.class);
             List<Joke> jokes = q.getResultList();
             Joke joke = jokes.get(ran.nextInt(jokes.size()));
-            return joke;
+            return new JokeDTO(joke);
         } finally {
             em.close();
         }
