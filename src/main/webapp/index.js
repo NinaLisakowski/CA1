@@ -4,7 +4,7 @@ document.getElementById("btn").onclick = fetching;
 
 function fetching() {
     fetch(url)
-            .then(res => res.json()) //in flow1, just do it
+            .then(res => res.json()) 
             .then(data => {
                 maketable(data);
             })
