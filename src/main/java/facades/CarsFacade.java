@@ -53,6 +53,7 @@ public class CarsFacade {
     }
 
     //R: BY(id, year, make, model, price), (All)
+    /*
     public CarsDTO getCarByID(Long id) {
         EntityManager em = getEntityManager();
         try {
@@ -102,7 +103,7 @@ public class CarsFacade {
             em.close();
         }
     }
-
+*/
     public List<CarsDTO> getAllCars() {
         EntityManager em = getEntityManager();
         CarsDTOConversion convert = new CarsDTOConversion();

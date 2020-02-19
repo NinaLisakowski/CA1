@@ -47,28 +47,4 @@ public class CarsResource {
         List<CarsDTO> cars = FACADE.getAllCars();
         return GSON.toJson(cars);
     }
-
-
-//        @GET
-//    @Path("/highestpaid")
-//    @Produces(MediaType.APPLICATION_JSON)
-//    public String getJson3() {
-//        EmployeeFacade ef = getEmployeeFacade(Persistence.createEntityManagerFactory("pu"));
-//        List<EmployeeDTO> employee = ef.getEmployeeWithHighestSalary();
-//        return new Gson().toJson(employee);
-//    @GET
-//    @Path("/{id}")
-//    @Produces(MediaType.APPLICATION_JSON)
-//    public String getJson1(@PathParam("id") Long id) {
-//        Movie movie = FACADE.getMovie(id);
-//        return new Gson().toJson(movie);
-//    }
-//    
-//    @GET
-//    @Path("/name/{name}")
-//    @Produces(MediaType.APPLICATION_JSON)
-//    public String getJson2(@PathParam("name") String name) {
-//        List<Movie> movie = FACADE.getMoviesByName(name);
-//        return new Gson().toJson(movie);
-//    }
 }
