@@ -10,6 +10,20 @@ a {
     text-decoration: none;
 }
 
+.btnHolder {
+    display: block;
+}
+
+#btnHolder,
+#insertData {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#insertData {
+    padding-left: 250px;
+}
+
 .myButton {
     margin-bottom: 12.5px;
     width: 275px;

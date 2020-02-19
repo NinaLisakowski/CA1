@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Our Cars For Sale</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="ezyCss.css">
-</head>
+    <head>
+        <title>Our Cars For Sale</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="ezyCss.css">
+    </head>
 
-<body>
-    <h1>Car sale page</h1>
+    <body>
+        <h1>Car sale page</h1>
+        <div class="SideBySide">
+            <div id="btnHolder">
+                <button class="btnHolder" type="button" id="fetchButton">Fetch all cars</button>
+                <input type="number" name="priceFilter" value="" id="priceInput"/>
+                <button class="btnHolder" type="button" id="filterPriceBtn">Price less than</button>
+                <input type="number" name="yearFilter" value="" id="yearInput"/>
+                <button class="btnHolder" type="button" id="filterYearBtn">Newer than</button>
+                <input type="text" name="makeFilter" value="" id="makeInput"/>
+                <button class="btnHolder" type="button" id="filterMakeBtn">Made by</button>
+                <button class="btnHolder" type="button" id="sortPrice">Sort by price</button>
+                <button class="btnHolder" type="button" id="sortYear">Sort by Year</button>
+                <button class="btnHolder" type="button" id="sortMake">Sort by Make</button>
+                <button class="btnHolder" type="button" id="sortModel">Sort by Model</button>
 
-    <!--Code above footer. Footer stays at the bottom of all pages.-->
-    <script src="Footer.js"></script>
-</body>
+            </div>
+            <div id="insertData">
+                <table border="1" id="table">
+                    <!--Table data from fetch goes here.-->
+                </table>
+            </div>
+        </div>
+
+        <script src="fetchCars.js"></script>
+        <!--Code above footer. Footer stays at the bottom of all pages.-->
+        <footer>
+            <script src="Footer.js"></script>
+        </footer>
+    </body>
 
 </html>
