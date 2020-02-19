@@ -3,7 +3,6 @@ linkBack.type = "button";
 linkBack.onclick = function() {
     location.href = "index.html";
 };
-linkBack.value = "LinkBack here."
+linkBack.value = "Back to main menu";
 linkBack.className = "myButton";
 document.body.appendChild(linkBack);
-//.
