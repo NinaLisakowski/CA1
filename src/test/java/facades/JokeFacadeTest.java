@@ -103,8 +103,19 @@ public class JokeFacadeTest {
         expList.add(new JokeDTO(j1));
         expList.add(new JokeDTO(j2));
         expList.add(new JokeDTO(j3));
-        JokeDTO result = facade.getRandomJoke();
-        assertTrue(expList.contains(result));
+        List<JokeDTO> resultList = new ArrayList<>();
+        
+        boolean allJokesFound = false;
+        while (!allJokesFound) {
+           JokeDTO result = facade.getRandomJoke(); 
+           if (!resultList.contains(result)) {
+               resultList.add(result);
+           }
+           
+           if (resultList.containsAll(expList)) {
+               allJokesFound = true;
+           }
+        }
     }
 
 }

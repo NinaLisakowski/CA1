@@ -1,10 +1,13 @@
 package rest;
 
+import dtos.JokeDTO;
 import entities.Joke;
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.given;
 import io.restassured.parsing.Parser;
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.ws.rs.core.UriBuilder;
@@ -131,7 +134,7 @@ public class JokeResourceTest {
                 .body("reference", is(j1.getReference()))
                 .body("type", is(j1.getType()));
     }
-    
+
     /**
      * Test of getById method with wrong id, of class JokeResource.
      */
@@ -151,12 +154,26 @@ public class JokeResourceTest {
      */
     @Test
     public void testGetRandom() {
-        given().when()
-                .get("/joke/random").
-                then()
-                .assertThat()
-                .statusCode(HttpStatus.OK_200.getStatusCode());
-        //This is not done
+        List<JokeDTO> jokes = new ArrayList<>();
+        jokes.add(new JokeDTO(j1));
+        jokes.add(new JokeDTO(j2));
+        jokes.add(new JokeDTO(j3));
+        List<JokeDTO> randomJokes = new ArrayList<>();
+        
+        boolean allJokesFound = false;
+        while (!allJokesFound) {
+            randomJokes.add(given()
+                    .get("joke/random").
+                    then()
+                    .assertThat()
+                    .statusCode(HttpStatus.OK_200.getStatusCode()).
+                    extract()
+                    .as(JokeDTO.class));
+            
+            if(randomJokes.containsAll(jokes)) {
+                allJokesFound = true;
+            }
+        }
     }
 
 }

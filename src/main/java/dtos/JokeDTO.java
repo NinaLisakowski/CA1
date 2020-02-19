@@ -65,5 +65,10 @@ public class JokeDTO {
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "JokeDTO{" + "joke=" + joke + '}';
+    }
     
 }
