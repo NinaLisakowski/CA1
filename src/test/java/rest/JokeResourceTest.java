@@ -1,6 +1,6 @@
 package rest;
 
-import dtos.JokeDTO;
+import dto.JokeDTO;
 import entities.Joke;
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.given;
@@ -20,7 +20,6 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 import utils.EMF_Creator;
 
 /**

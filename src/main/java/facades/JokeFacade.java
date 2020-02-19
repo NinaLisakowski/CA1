@@ -1,7 +1,7 @@
 package facades;
 
-import dtos.JokeDTO;
-import dtos.JokeListDTO;
+import dto.JokeDTO;
+import dto.JokeListDTO;
 import entities.Joke;
 import java.util.List;
 import java.util.Random;

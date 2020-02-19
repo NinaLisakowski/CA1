@@ -1,4 +1,4 @@
-package dtos;
+package dto;
 
 import entities.Joke;
 import java.util.Objects;

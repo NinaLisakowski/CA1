@@ -1,6 +1,6 @@
 package facades;
 
-import dtos.JokeDTO;
+import dto.JokeDTO;
 import entities.Joke;
 import java.util.ArrayList;
 import java.util.List;

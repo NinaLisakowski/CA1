@@ -2,7 +2,7 @@ package rest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import dtos.JokeDTO;
+import dto.JokeDTO;
 import facades.JokeFacade;
 import javax.persistence.EntityManagerFactory;
 import javax.ws.rs.Produces;
