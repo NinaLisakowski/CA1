@@ -18,7 +18,7 @@ public class GroupMemberDTO {
     private String studentid;
     private String favouriteColour;
     private String favouriteAnimal;
-    private String eyeColor;
+    private String eyeColour;
     private int height;
     private int shoeSize;
 
@@ -28,7 +28,7 @@ public class GroupMemberDTO {
         this.studentid = gm.getStudentid();
         this.favouriteColour = gm.getFavouriteColour();
         this.favouriteAnimal = gm.getFavouriteAnimal();
-        this.eyeColor = gm.getEyeColor();
+        this.eyeColour = gm.getEyeColor();
         this.height = gm.getHeight();
         this.shoeSize = gm.getShoeSize();
     }
@@ -53,8 +53,8 @@ public class GroupMemberDTO {
         return favouriteAnimal;
     }
 
-    public String getEyeColor() {
-        return eyeColor;
+    public String getEyeColour() {
+        return eyeColour;
     }
 
     public int getHeight() {
@@ -67,7 +67,7 @@ public class GroupMemberDTO {
 
     @Override
     public String toString() {
-        return "GroupMemberDTO{" + "id=" + id + ", name=" + name + ", studentid=" + studentid + ", favouriteColour=" + favouriteColour + ", favouriteAnimal=" + favouriteAnimal + ", eyeColor=" + eyeColor + ", height=" + height + ", shoeSize=" + shoeSize + '}';
+        return "GroupMemberDTO{" + "id=" + id + ", name=" + name + ", studentid=" + studentid + ", favouriteColour=" + favouriteColour + ", favouriteAnimal=" + favouriteAnimal + ", eyeColour=" + eyeColour + ", height=" + height + ", shoeSize=" + shoeSize + '}';
     }
     
     
