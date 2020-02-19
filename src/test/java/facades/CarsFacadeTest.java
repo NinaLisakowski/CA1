@@ -10,6 +10,9 @@ import entities.Cars;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import static org.hamcrest.CoreMatchers.everyItem;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.hasProperty;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -64,5 +67,36 @@ public class CarsFacadeTest {
     public void tearDown() {
 //        Remove any data after each test was run
     }
+    
+    @Test
+    public void testGetAllCars(){
+        List<CarsDTO> cars = facade.getAllCars();
+        assertThat(cars, everyItem(hasProperty("model")));
+    }
 
+    /**
+     * Test of createCars method, of class CarsFacade.
+     */
+    @Test
+    public void testCreateCars() {
+        System.out.println("createCars");
+        Long year = 3050L;
+        String make = "MakeCar";
+        String model = "ModelCar";
+        String owner = "OwnerCar";
+        String vin = "VINNumberCar";
+        int price = 10;
+        Cars car = facade.createCars(year, make, model, owner, vin, price);
+        assertEquals(3, facade.getAllCars().size());
+        }
+
+    /**
+     * Test of populateDB method, of class CarsFacade.
+     */
+    @Test
+    public void testPopulateDB() {
+        System.out.println("populateDB");
+        facade.populateDB();
+        assertEquals(7, facade.getAllCars().size());
+    }
 }
