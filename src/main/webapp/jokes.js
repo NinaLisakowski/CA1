@@ -13,7 +13,8 @@ fetch(urlAll)
         })
         
 function createTable(arr) {
-    let tableBody = "<tbody>"
+    let tableBody = "<tbody>";
+    
     arr.forEach(function (item) {
         let values = Object.values(item);
         tableBody += "<tr>";
@@ -23,7 +24,6 @@ function createTable(arr) {
         tableBody += "</tr>";
     });
     tableBody += "</tbody>";
-    console.log("returnstring:", tableBody)
     
     document.getElementById("jokeTable").innerHTML += tableBody;
 }
