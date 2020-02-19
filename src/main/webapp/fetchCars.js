@@ -63,3 +63,51 @@ function filterMake(evt){
     let newCars = cars.filter((car) => car.make == make.value);
     document.getElementById("table").innerHTML = updateTable(newCars);
 }
+
+document.getElementById("sortPrice").onclick = sortPrice;
+
+function sortPrice(evt){
+    evt.preventDefault()
+    let newCars = cars;
+    newCars.sort(function(a,b){
+        return a.price - b.price;
+    })
+    document.getElementById("table").innerHTML = updateTable(newCars);
+
+}
+
+document.getElementById("sortMake").onclick = sortMake;
+
+function sortMake(evt){
+    evt.preventDefault()
+    let newCars = cars;
+    newCars.sort(function(a,b){
+            return a.make.toLowerCase().localeCompare(b.make.toLowerCase());
+    })
+    document.getElementById("table").innerHTML = updateTable(newCars);
+
+}
+
+document.getElementById("sortModel").onclick = sortModel;
+
+function sortModel(evt){
+    evt.preventDefault()
+    let newCars = cars;
+    newCars.sort(function(a,b){
+            return a.model.toLowerCase().localeCompare(b.model.toLowerCase());
+    })
+    document.getElementById("table").innerHTML = updateTable(newCars);
+
+}
+
+document.getElementById("sortYear").onclick = sortYear;
+
+function sortYear(evt){
+    evt.preventDefault()
+    let newCars = cars;
+    newCars.sort(function(a,b){
+        return a.year - b.year;
+    })
+    document.getElementById("table").innerHTML = updateTable(newCars);
+
+}
