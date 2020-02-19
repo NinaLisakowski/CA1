@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Our Cool Jokes</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="ezyCss.css">
+    </head>
 
-<head>
-    <title>Our Cool Jokes</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="ezyCss.css">
-</head>
+    <body>
+        <h1>Joke selector page</h1>
 
-<body>
-    <h1>Joke selector page</h1>
+        <table id="jokeTable">
+            <thead>
+                <tr>
+                    <th>Joke</th>
+                    <th>Reference</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+        </table>
 
-    <!--Code above footer. Footer stays at the bottom of all pages.-->
-    <script src="Footer.js"></script>
-</body>
+        <input type="text" name="inputId" value="" id="inputId"/>
+        <input type="submit" value="Fetch" id="idBtn"/>
+        <input type="submit" value="Get Random Joke" id="randomBtn"/>
+        <p id="joke"></p>
 
+        <script src="jokes.js"></script>
+
+        <!--Code above footer. Footer stays at the bottom of all pages.-->
+        <script src="Footer.js"></script>
+    </body>
 </html>
