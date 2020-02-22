@@ -145,7 +145,7 @@ public class JokeResourceTest {
                 .assertThat()
                 .statusCode(404)
                 .body("code", is(404))
-                .body("msg", is("Movie not found"));
+                .body("msg", is("Joke not found"));
     }
 
     /**
