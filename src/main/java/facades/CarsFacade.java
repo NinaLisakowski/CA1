@@ -123,6 +123,11 @@ public class CarsFacade {
         Cars c3 = createCars(2000L, "Chevy", "Venture", "Caroline", "3KQUC61NETB034876", 5000);
         Cars c4 = createCars(1996L, "Jeep", "Grand Cherokee", "Lars", "4NATC25JECP384762", 4799);
         Cars c5 = createCars(2005L, "Volvo", "V70", "Tunoc", "5NECO92NEHD876134", 44799);
+        Cars c6 = createCars(2008L, "Lamborghini", "Urus", "Tunoc", "3EKSO64NSBT863279", 1000000);
+        Cars c7 = createCars(2016L, "Lamborghini", "Adventadore", "Allan", "8NEBK20NEDO673180", 9999999);
+        Cars c8 = createCars(2003L, "Dodge", "Challenger SR3 Hellcat", "Tunoc", "8AUCO64MANC876530", 10);
+        Cars c9 = createCars(1201L, "VW", "Golf", "Nina", "9NAVB10LENA013267", 8000);
+        Cars c10 = createCars(2003L, "Kia", "Picanto", "Caroline", "7QOCE67UDBR648273", 6000);
     }
 
 }
