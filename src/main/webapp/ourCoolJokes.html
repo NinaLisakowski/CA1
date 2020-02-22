@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Our Cool Jokes</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <h1>Joke selector page</h1>
 
-        <div class="container" style="margin:0 auto;">
-            <table id="jokeTable" align="center">
-                <thead>
-                    <tr>
-                        <th>Joke</th>
-                        <th>Reference</th>
-                        <th>Type</th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-        <br>
-        
-        <input type="text" name="inputId" value="" id="inputId"/>
-        <input type="submit" value="Fetch" id="idBtn"/>
-        <input type="submit" value="Get Random Joke" id="randomBtn"/>
-        <p id="joke"></p>
-        <br>
-        
-        <script src="jokes.js"></script>
+<head>
+    <title>Our Cool Jokes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-        <!--Code above footer. Footer stays at the bottom of all pages.-->
-        <footer>
-            <script src="Footer.js"></script>
-        </footer>
-    </body>
+<body>
+    <h1>Joke selector page</h1>
+
+    <div class="container" style="margin:0 auto;">
+        <table id="jokeTable" align="center">
+            <thead>
+                <tr>
+                    <th>Joke</th>
+                    <th>Reference</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <br>
+
+    <input type="text" name="inputId" value="" id="inputId" />
+    <input class="callButtons" type="submit" value="Fetch" id="idBtn" />
+    <input class="callButtons" type="submit" value="Get Random Joke" id="randomBtn" />
+    <p id="joke"></p>
+    <br>
+
+    <script src="jokes.js"></script>
+
+    <!--Code above footer. Footer stays at the bottom of all pages.-->
+    <footer>
+        <script src="Footer.js"></script>
+    </footer>
+</body>
+
 </html>

@@ -97,6 +97,6 @@ public class CarsFacadeTest {
     public void testPopulateDB() {
         System.out.println("populateDB");
         facade.populateDB();
-        assertEquals(7, facade.getAllCars().size());
+        assertEquals(12, facade.getAllCars().size());
     }
 }
