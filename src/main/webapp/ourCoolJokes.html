@@ -3,21 +3,23 @@
     <head>
         <title>Our Cool Jokes</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="ezyCss.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
         <h1>Joke selector page</h1>
 
-        <table id="jokeTable">
-            <thead>
-                <tr>
-                    <th>Joke</th>
-                    <th>Reference</th>
-                    <th>Type</th>
-                </tr>
-            </thead>
-        </table>
+        <div class="container" >
+            <table id="jokeTable">
+                <thead>
+                    <tr>
+                        <th>Joke</th>
+                        <th>Reference</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
         <input type="text" name="inputId" value="" id="inputId"/>
         <input type="submit" value="Fetch" id="idBtn"/>
         <input type="submit" value="Get Random Joke" id="randomBtn"/>
