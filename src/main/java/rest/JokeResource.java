@@ -46,7 +46,7 @@ public class JokeResource {
         try {
         joke = FACADE.getJokeById(id);
         } catch (NullPointerException e) {
-            return Response.status(404).entity("{\"code\":404,\"msg\":\"Movie"
+            return Response.status(404).entity("{\"code\":404,\"msg\":\"Joke"
                     + " not found\"}").build();
         }
         
