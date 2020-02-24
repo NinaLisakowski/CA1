@@ -6,6 +6,11 @@ dist: bionic
 
 language: java
 
+stages:
+  - name: deploy
+    # require the branch name to be master (note for PRs this is the base branch name)
+    if: branch = master
+
 cache:
   directories:  
     - $HOME/.m2
