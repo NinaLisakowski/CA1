@@ -6,11 +6,6 @@ dist: bionic
 
 language: java
 
-stages:
-  - name: deploy
-    # require the branch name to be master (note for PRs this is the base branch name)
-    if: branch = master
-
 cache:
   directories:  
     - $HOME/.m2
@@ -18,6 +13,8 @@ cache:
 script:
   - mvn test
   - mvn -Dremote.user=$REMOTE_USER -Dremote.password=$REMOTE_PW tomcat7:deploy
+  on: branch: master
+  
 
 #deploy: on: branch: master
 
