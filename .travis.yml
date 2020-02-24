@@ -10,11 +10,19 @@ cache:
   directories:  
     - $HOME/.m2
 
-script:
+env:
   - mvn test
-  if: branch = master then
   - mvn -Dremote.user=$REMOTE_USER -Dremote.password=$REMOTE_PW tomcat7:deploy
-  fi
+jobs: 
+  include:
+    if: branch = master
+    env: - mvn -Dremote.user=$REMOTE_USER -Dremote.password=$REMOTE_PW tomcat7:deploy
+
+
+ #script:
+ # - mvn test
+#  - mvn -Dremote.user=$REMOTE_USER -Dremote.password=$REMOTE_PW tomcat7:deploy
+
 
 #deploy: on: branch: master
 
